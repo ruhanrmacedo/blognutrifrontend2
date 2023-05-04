@@ -3,24 +3,27 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 100vw
+  width: 100vw;
+  background: linear-gradient(to bottom, #fff 0%, #f2f2f2 100%);
 }
 
 .blog-grid {
-  position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   margin: 0 auto;
 }
 
 .container button {
-  background-color: #0275d8;
+  background-color: #008CBA;
   color: white;
   font-weight: bold;
-  bottom: 16px;
-  right: 24px;
-  transition: all 0.1s linear 0.1s;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+  transition: all 0.2s ease-in-out;
 }
 
 .container button:hover {
@@ -47,4 +50,42 @@
 
 .blog-grid-reverse {
   flex-direction: column-reverse;
+}
+
+.delete-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-form label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.delete-form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.delete-form button {
+  background-color: #BA160C;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
 }

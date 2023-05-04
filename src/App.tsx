@@ -48,13 +48,15 @@ function App() {
         </div>
       )}
       
+      {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
+      <button onClick={handleOpenModal}>Novo Post</button>
+
       <div className="delete-form">
-        <label htmlFor="postIdInput">ID do post:</label>
+        <label htmlFor="postIdInput">ID do post a ser excluído:</label>
         <input type="number" id="postIdInput" value={postIdToDelete} onChange={(e) => setPostIdToDelete(e.target.value)} />
         <button onClick={handleDeletePost}>Excluir</button>
       </div>
-      {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
-      <button onClick={handleOpenModal}>Novo Post</button>
+
     </div>
   );
 }
