@@ -1,7 +1,7 @@
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     overflow: hidden;
     height: 100vh;
     width: 100vw;
@@ -13,53 +13,79 @@
     z-index: 999;
 }
 
-.modal-overlay .modal-body {
-    background-color: white;
+.modal-body {
+    background-color: #fff;
     padding: 24px;
-    height: 60%;
-    width: 60%;
+    height: 80%;
+    width: 70%;
     border-radius: 24px;
-
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.modal-overlay .modal-body h2 {
-    font-size: 32px;
+.modal-body h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 32px;
 }
 
-.modal-overlay .modal-body .input-container {
-    width: calc(100% - 24px);
+.input-container {
+    width: 95%;
+    margin-bottom: 20px;
 }
 
-.modal-overlay .modal-body input {
-    padding: 12px;
-    border: 2px solid #c6c5c5c5;
-    color: rgba(0,0,0,0.9);
-    font-size: 18px;
-    line-height: 24px;
-    border-radius: 12px;
-    width: 100%;
-
-    margin-bottom: 12px;
-}
-
-.modal-overlay .modal-body label {
-    color: #242424;
-    font-weight: 600;
+.input-container label {
+    display: block;
     margin-bottom: 8px;
     font-size: 18px;
+    font-weight: 600;
+    color: #242424;
 }
 
-.modal-overlay .modal-body .btn-secondary {
-    position: initial;
+.input-container input,
+.input-container textarea {
     width: 100%;
-    margin-top: 32px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 2px solid #c6c5c5c5;
+    font-size: 18px;
+    color: #242424;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease-in-out;
 }
 
-.modal-overlay .modal-body .btn-secondary:hover {
-    background-color: #3a44f8;
-    transform: scale(1);
+.input-container input:focus,
+.input-container textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.btn-secondary {
+    display: inline-block;
+    width: 50%;
+    max-width: 200px;
+    padding: 10px;
+    background: linear-gradient(to bottom right, #6c63ff, #4d55ff);
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 12px;
+    margin-top: 24px;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.05);
 }

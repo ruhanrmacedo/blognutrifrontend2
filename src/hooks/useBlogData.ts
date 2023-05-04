@@ -9,6 +9,8 @@ const fetchData = async (): AxiosPromise<BlogData[]> => {
     return response;
 }
 
+
+
 export function useBlogData(){
     const query = useQuery({
         queryFn: fetchData,
